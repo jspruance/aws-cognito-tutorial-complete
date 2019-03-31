@@ -70,7 +70,6 @@ class Register extends Component {
   }
 
   render() {
-    const p = this.props;
     return (
       <section className="section auth">
         <div className="container">

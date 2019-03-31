@@ -41,8 +41,7 @@ class App extends Component {
       console.log(session);
       const user = await Auth.currentAuthenticatedUser();
       this.setUser(user);
-    }
-    catch(error) {
+    } catch(error) {
       if (error !== 'No current user') {
         console.log(error);
       }
@@ -73,7 +72,7 @@ class App extends Component {
               <Route exact path="/forgotpassword" render={(props) => <ForgotPassword {...props} auth={authProps} />} />
               <Route exact path="/forgotpasswordverification" render={(props) => <ForgotPasswordVerification {...props} auth={authProps} />} />
               <Route exact path="/changepassword" render={(props) => <ChangePassword {...props} auth={authProps} />} />
-              <Route exact path="/changepasswordconfirm" render={(props) => <ChangePasswordConfirm {...props} auth={authProps} />} />
+              <Route exact path="/changepasswordconfirmation" render={(props) => <ChangePasswordConfirm {...props} auth={authProps} />} />
               <Route exact path="/welcome" render={(props) => <Welcome {...props} auth={authProps} />} />
             </Switch>
             <Footer />
